@@ -1,0 +1,93 @@
+/*a*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@property --gradientrightcolor {
+    syntax: '<color>';
+    initial-value: #ffffff;
+    inherits: false;
+}
+
+@property --gradientleftcolor {
+    syntax: '<color>';
+    initial-value: #ffffff;
+    inherits: false;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+section.about {
+    font-size: 200%;
+}
+
+header {
+    text-align: center;
+    margin: 0px 15px 0px 15px;
+    padding: 16px 0px 16px 0px;
+}
+
+main {
+    min-height: calc(100vh - 53px - 37px); /*Deixar o footer sempre no rodapé do navegador*/
+}
+
+footer {
+    text-align: center;
+    margin: 0px 30px 0px 30px;
+    padding: 8px 0px 8px 0px;
+}
+
+section.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        transition: --gradientleftcolor .5s ease, --gradientrightcolor .5s ease;
+        --gradientleftcolor: #0A0A0A;
+        --gradientrightcolor: #222222;
+        background: linear-gradient(90deg, var(--gradientleftcolor) 0%, var(--gradientrightcolor) 100%);
+    }
+    header {
+        border-bottom: solid 2px white;
+    }
+    h1, h2, a, p {
+        color: white;
+    }
+    h2#subtitle {
+        font-style: italic;
+    }
+    footer {
+        border-top: solid 2px white;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    html { 
+            transition: --gradientleftcolor .5s ease, --gradientrightcolor .5s ease;
+            --gradientleftcolor: #C4C4C4;
+            --gradientrightcolor: #D9D9D9;
+            background: linear-gradient(90deg, var(--gradientleftcolor) 0%, var(--gradientrightcolor) 100%);
+        }
+    h1, h2, a, p {
+        color: black;
+    }
+    h2#subtitle {
+        font-style: italic;
+    }
+    header {
+        border-bottom: solid 2px black;
+    }
+    footer {
+        border-top: solid 2px black;
+    }
+}
