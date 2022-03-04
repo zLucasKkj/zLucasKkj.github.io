@@ -74,8 +74,8 @@ section.about {
 @media (prefers-color-scheme: light) {
     html { 
             transition: --gradientleftcolor .5s ease, --gradientrightcolor .5s ease;
-            --gradientleftcolor: #C4C4C4;
-            --gradientrightcolor: #D9D9D9;
+            --gradientleftcolor: #0A0A0A;
+            --gradientrightcolor: #fafafa;
             background: linear-gradient(90deg, var(--gradientleftcolor) 0%, var(--gradientrightcolor) 100%);
         }
     h1, h2, a, p {
