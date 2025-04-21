@@ -32,11 +32,11 @@ section.about {
 header {
     text-align: center;
     margin: 0px 15px 0px 15px;
-    padding: 16px 0px 16px 0px;
+    padding: 10px 0px 10px 0px;
 }
 
 main {
-    min-height: calc(100vh - 53px - 37px); /*Deixar o footer sempre no rodapé do navegador*/
+    min-height: calc(100vh - 113.6px); /*Deixar o footer sempre no rodapé do navegador*/
 }
 
 footer {
